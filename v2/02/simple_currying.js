@@ -6,7 +6,9 @@ function laske (x, y){
 // Currying:
 
 function laskeCur(x){
+  console.log("In x : " + x);
   return function(y){
+    console.log(x + " " + y);
     return 2 * x + y;
   };
 }

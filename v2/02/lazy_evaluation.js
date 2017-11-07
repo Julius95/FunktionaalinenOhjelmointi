@@ -16,14 +16,14 @@ let parittomienNeliot =
 
 console.log ('Taulukko:');
 
-let parittomienNeliotTaulukko = 
+/*let parittomienNeliotTaulukko = 
     [1,2,3,4,5,6,7,8]
     .filter(function(x){console.log(`filter ${x}`) ; return x % 2 })
     .map(function(x){console.log(`map ${x}`); return x * x});
-    
-//console.log(`0: ${parittomienNeliot.get(0)}`);        
+  */  
+console.log(`0: ${parittomienNeliot.get(0)}`);        
 //console.log(`1:  ${parittomienNeliotTaulukko[1]}`);    
-//console.log(`2: ${parittomienNeliot.get(2)}`);     
+console.log(`2: ${parittomienNeliot}`);     
 
 
     
