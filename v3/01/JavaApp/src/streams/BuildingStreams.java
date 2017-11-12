@@ -9,7 +9,7 @@ import java.nio.file.*;
 public class BuildingStreams {
 
     public static void main(String...args) throws Exception{
-        
+
         // Stream.of
         Stream<String> stream = Stream.of("Java 8", "Lambdas", "In", "Action");
         stream.map(s -> s.toUpperCase()).forEach(i -> System.out.println());
@@ -30,17 +30,17 @@ public class BuildingStreams {
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})
               .limit(10)
               .forEach(t -> System.out.println("(" + t[0] + ", " + t[1] + ")"));
-        
+
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})
               .limit(10)
-              . map(t -> t[0])  
-              .forEach(i -> System.out.println());
+              . map(t -> t[0])
+              .forEach(i -> System.out.println(i));
 
         // random stream of doubles with Stream.generate
         Stream.generate(() -> Math.random())
               .limit(10)
               .forEach(i -> System.out.println());
- 
+
         // stream of 1s with Stream.generate
         IntStream.generate(() -> 1)
                  .limit(5)
@@ -51,8 +51,10 @@ public class BuildingStreams {
                 return 2;
             }
         }).limit(5)
-          .forEach(i -> System.out.println());
-   
+          .forEach(i -> System.out.println(i));
+
+        Path currentDir = Paths.get(".", "v3\\01\\JavaApp\\data.txt");
+        System.out.println(currentDir.toAbsolutePath());
 
         IntSupplier fib = new IntSupplier(){
                   private int previous = 0;
@@ -66,7 +68,7 @@ public class BuildingStreams {
               };
          IntStream.generate(fib).limit(10).forEach(i -> System.out.println());
 
-         long uniqueWords = Files.lines(Paths.get("data.txt"), Charset.defaultCharset())
+         long uniqueWords = Files.lines(Paths.get(".", "v3\\01\\JavaApp\\data.txt"), Charset.defaultCharset())
                                  .flatMap(line -> Arrays.stream(line.split(" ")))
                                  .distinct()
                                  .count();

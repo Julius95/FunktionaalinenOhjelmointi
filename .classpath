@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="v3/01/JavaApp/src"/>
+	<classpathentry kind="src" path="v3/02/java1_Runnable"/>
+	<classpathentry kind="src" path="v3/02/java2_OmaFIF"/>
+	<classpathentry kind="src" path="v3/02/java3_Omenat"/>
+	<classpathentry kind="src" path="v3/02/java4_predicate"/>
+	<classpathentry kind="src" path="v3/02/java5_consumer"/>
+	<classpathentry kind="src" path="v3/02/java6_function"/>
+	<classpathentry kind="src" path="v3/02/JavaApplication1/src"/>
+	<classpathentry kind="src" path="v3/02/Tehtavapohjat"/>
+	<classpathentry kind="src" path="v4/01/JavaApp/src"/>
+	<classpathentry excluding="Observer/|TemplateMethod/|AbstractFactory/|Strategy/|ChainOfResponsibility/" kind="src" path="v4/02"/>
+	<classpathentry kind="src" path="v4/02/AbstractFactory"/>
+	<classpathentry kind="src" path="v4/02/ChainOfResponsibility"/>
+	<classpathentry kind="src" path="v4/02/Observer"/>
+	<classpathentry kind="src" path="v4/02/Strategy"/>
+	<classpathentry kind="src" path="v4/02/TemplateMethod"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

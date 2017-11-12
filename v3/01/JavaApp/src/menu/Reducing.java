@@ -1,6 +1,12 @@
 package menu;
 import java.util.stream.*;
+
+import menu.Dish.Type;
+import streams.Transaction;
+
 import java.util.*;
+
+import static java.util.stream.Collectors.toList;
 import static menu.Dish.dishTags;
 import static menu.Dish.menu;
 
@@ -25,5 +31,7 @@ public class Reducing{
                            .map(dish -> dish.getCalories())
                            .reduce(0, (a,b) -> Integer.sum(a,b));
         System.out.println("Number of calories:" + calories);
+
+
     }
 }
