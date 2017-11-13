@@ -84,7 +84,6 @@ public class Tehtavat {
 
 		//T.3//
 		System.out.println("Heitetään Noppaa 20 kertaa");
-		Random random = new Random();
 		int kuutoset = (int) IntStream.generate(() -> ThreadLocalRandom.current().nextInt(1, 7))
 						.limit(20)
 						.filter(luku ->{ System.out.println(luku);return luku == 6;})

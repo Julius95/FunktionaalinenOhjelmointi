@@ -36,6 +36,9 @@ public class Makihyppy {
     		   .distinct().limit(7);
        	System.out.println();
        	arpoja.arvo().forEach(i -> System.out.print(i + " "));
+
+       	//T.4
+       	
     }
 
 }
