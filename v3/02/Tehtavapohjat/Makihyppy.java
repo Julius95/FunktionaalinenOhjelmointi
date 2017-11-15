@@ -7,10 +7,6 @@ interface Arpoja{
 	IntStream arvo();
 }
 
-interface Fibonacci{
-	IntStream getNext();
-}
-
 public class Makihyppy {
 
     static DoubleUnaryOperator makePistelaskuri(double kPiste, double lisapisteet){

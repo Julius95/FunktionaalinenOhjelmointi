@@ -1,6 +1,5 @@
 # viikko 3 02
 
-Viikon 3 perjantain tehtävät.
 
 # Javan funktionaalisia rajapintoja
 
