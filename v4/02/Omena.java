@@ -1,4 +1,4 @@
-public class Omena{
+/*public class Omena{
 
     private String vari;
     private int paino;
@@ -21,5 +21,5 @@ public class Omena{
         return "Omena: " + vari + ":" + paino + " g";
     }
 
-}
+}*/
 

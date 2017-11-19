@@ -48,11 +48,11 @@ public class ParallelStreams {
             total += value;
         }
     }
-    
+
      public static long sideEffectParallelSumLong(long n) {
         LongAccumulator accumulator = new LongAccumulator(Long::sum, 0);
         LongStream.rangeClosed(1, n).forEach(accumulator::accumulate);
         return accumulator.longValue();
     }
-    
+
 }

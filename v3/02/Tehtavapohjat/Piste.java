@@ -24,31 +24,17 @@ public class Piste {
 		this.y = y;
 	}
 
-	public static Function makeSiirto(int i, int j) {
-		Function<Piste, Piste> siirra = (Piste p) -> {
-			p.setX(i+p.getX());
-			p.setY(j+p.getY());
-			return p;
-		};
-		return siirra;
+	public static Function<Piste,Piste> makeSiirto(int i, int j) {
+		return (Piste p) -> new Piste(p.x + i, p.y + j);
 	}
 
-	public static Function makeSkaalaus(int i) {
-		Function<Piste, Piste> skaalaa = (Piste p) -> {
-			p.setX(i*p.getX());
-			p.setY(i*p.getY());
-			return p;
-		};
-		return skaalaa;
+	public static Function<Piste, Piste> makeSkaalaus(int i) {
+		return (Piste p) -> new Piste(p.x * i, p.y * i);
 	}
 
-	public static Function makeKierto(double phi) {
-		Function<Piste, Piste> kierra = (Piste p) -> {
-			p.setX(Math.round(p.x*Math.cos(phi*Math.PI/phi) - p.y * Math.sin(phi*Math.PI/phi)));
-			p.setY(Math.round(p.x*Math.sin(phi*Math.PI/phi) + p.y * Math.cos(phi*Math.PI/phi)));
-			return p;
-		};
-		return kierra;
+	public static Function<Piste,Piste> makeKierto(double phi) {
+		return (Piste p) -> new Piste(Math.round(p.x*Math.cos(phi*Math.PI/phi) - p.y * Math.sin(phi*Math.PI/phi)),
+				Math.round(p.x*Math.sin(phi*Math.PI/phi) + p.y * Math.cos(phi*Math.PI/phi)));
 	}
 
 	@Override
