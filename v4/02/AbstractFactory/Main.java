@@ -13,14 +13,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
+
         AbstractShapeFactory factory = new ShapeFactory();
-        
+
         Shape shape1 = factory.getShape("circle");
         Shape shape2 = factory.getShape("rectangle");
-        
+
         shape1.draw();
         shape2.draw();
     }
-    
+
 }

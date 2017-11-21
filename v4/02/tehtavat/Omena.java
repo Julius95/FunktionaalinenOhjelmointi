@@ -1,4 +1,5 @@
-/*public class Omena{
+package tehtavat;
+public class Omena{
 
     private String vari;
     private int paino;
@@ -21,5 +22,5 @@
         return "Omena: " + vari + ":" + paino + " g";
     }
 
-}*/
+}
 
