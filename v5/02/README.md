@@ -1,16 +1,18 @@
-# viikko 7 01
+# viikko 5 02
 
-Viikon 7 torstain materiaalia.
 
 # Clojuren kontrollirakenteet
 
 
+1. Kirjoita ohjelma (funktio), joka kysyy sinulta yhden luvun (> 0) ja kertoo, onko luku parillinen. Jos luku on <= 0, ohjelma tulostaa virheilmoituksen. Merkkijonosyötteen (read-line) voi muuttaa kokonaisluvuksi operaattorilla <b>Integer.</b>, esim. (Integer. "2")
 
+2. Lisää edelliseen funktioon toisto recur-operaattorilla: jos annettu luku on virheellinen, sitä pyydetäänn uudestaan (funktio kutsuu tässä tapauksessa itseään). 
 
-1. Arvo lottorivi. Arvo luvut valitsemaasi tietorakenteeseen ja tulosta ne. Käytä Clojuren silmukkarakenteita
-esim. loop, doseq tms.
+3. Kirjoita funktio, joka tulostaa silmukassa kolmella jaolliset luvut väliltä 1 - yläraja, kun yläraja annetaan funktiolle parametrina.
 
-2. Kahden luvun suurin yhteinen tekijä on suurin luku, jolla molemmat luvut ovat jaollisia.  Esimerkiksi lukujen 102 ja  68 suurin tekijä on 34.
+4. Arvo lottorivi: 7 numeroa väliltä 1-39. Arvo luvut valitsemaasi tietorakenteeseen ja tulosta ne. Joukko (set) on tässä paras ratkaisu). Käytä Clojuren loop-silmukkarakennetta.
+
+5.  Kahden luvun suurin yhteinen tekijä on suurin luku, jolla molemmat luvut ovat jaollisia.  Esimerkiksi lukujen 102 ja  68 suurin tekijä on 34.
 
 ```
 syt(p, q) {
@@ -22,44 +24,3 @@ syt(p, q) {
 }
 ```
 Toteuta tämä funktio recur:in avulla.
-
-
-3. Hakemistossa on kalevala.txt-niminen tiedosto, jossa on Kalevalan alusta pieni pätkä. Käytä slurpia tiedoston lukemiseen. Tee samanlainen esiintymälista kuin Javasriptillä/Javalla aiemmin.
-
-Esimerkiksi listasta 
-```
-'This is  a test.  This is only a test.'
-```
-pitää tulla tuloksena
-```
-{“a”:2, ”is”:2,  “only”:1, “test”:2, “this”:2 }
-```
-4. Viikolla 3 käsiteltiin pisteitä ja pisteiden transformaatioita. Esillä oli seuraava Java-kielinen ohjelma.
-
-```
-public class PisteenTransformaatiot {
-          
-    public static void main(String[] args) {
-               
-       Function siirto = Piste.makeSiirto(1, 2);
-       Function skaalaus = Piste.makeSkaalaus(2);
-       Function kierto = Piste.makeKierto(Math.PI);
-       Function muunnos = // muodosta tässä yhdistetty funktio
-       
-       Piste[] pisteet = {new Piste(1,1), new Piste(2,2), new Piste(3,3)};
-       List<Piste> uudetPisteet = new CopyOnWriteArrayList();
-       
-       for (Piste p: pisteet){
-           uudetPisteet.add((Piste)muunnos.apply(p));
-       } 
-  
-       uudetPisteet.forEach(p -> System.out.println(p));
-    }
-}
-```
-Mieti millaista tietorakennetta käyttäisit Clojuressa. Toteuta funktiot siirto, skaalaus ja kierto. Toteuta 
-vastaavanlainen toiminnallisuus Clojuressa: Käyt läpi pisteitä sisältävää tietorakennetta ja kohdistat jokaiseen pisteeseen kaikki funktiot.
-
-
-
-
