@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		long N = 10_000_000L;
 
-		System.out.println("Peräkkäinentoteutus aika : " + measurePerf(Main::laskentaa, ()->LongStream.rangeClosed(1, N).boxed()));
+		System.out.println("Pernentoteutus aika : " + measurePerf(Main::laskentaa, ()->LongStream.rangeClosed(1, N).boxed()));
 
 		System.out.println("Rinnakkainentoteutus aika : " + measurePerf(Main::laskentaaParallel, ()->LongStream.rangeClosed(1, N).boxed()));
 	}
