@@ -1,5 +1,4 @@
 package factory;
 
-public interface Juusto {
-	void print();
+public interface Juusto extends Tuote{
 }

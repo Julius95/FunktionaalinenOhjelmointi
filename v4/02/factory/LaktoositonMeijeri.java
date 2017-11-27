@@ -4,9 +4,9 @@ public class LaktoositonMeijeri extends AbstractMeijeri{
 
 	public LaktoositonMeijeri(){
 		super();
-		maitoS = MaitoLaktoositon::new;
-		jogurttiS = JogurttiLaktoositon::new;
-		juustoS = JuustoLaktoositon::new;
+		map.put("MAITO", MaitoLaktoositon::new);
+        map.put("JOGURTTI", JogurttiLaktoositon::new);
+        map.put("JUUSTO", JuustoLaktoositon::new);
 	}
 
 
