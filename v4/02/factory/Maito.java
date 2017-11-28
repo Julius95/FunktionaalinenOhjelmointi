@@ -1,5 +1,4 @@
 package factory;
 
-public interface Maito {
-	void print();
+public interface Maito extends Tuote{
 }

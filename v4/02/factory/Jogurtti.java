@@ -1,5 +1,4 @@
 package factory;
 
-public interface Jogurtti {
-	void print();
+public interface Jogurtti extends Tuote{
 }

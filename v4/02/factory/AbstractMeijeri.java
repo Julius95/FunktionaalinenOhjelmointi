@@ -1,25 +1,23 @@
 package factory;
 
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Supplier;
 
 public class AbstractMeijeri {
-	protected Supplier<Maito> maitoS;
-	protected Supplier<Juusto> juustoS;
-	protected Supplier<Jogurtti> jogurttiS;
+	Map<String, Supplier<Tuote>> map;
 
-    public AbstractMeijeri(){}
-
-    public Maito getMaito(){
-    	return maitoS.get();
-	}
-
-    public Juusto getJuusto(){
-    	return juustoS.get();
+    public AbstractMeijeri(){
+    	map = new HashMap<>();
     }
 
-    public Jogurtti getJogurtti(){
-    	return jogurttiS.get();
+    public Tuote getTuote(String nimi){
+    	Supplier<Tuote> shape = map.get(nimi.toUpperCase());
+        if(shape != null) {
+          return shape.get();
+        }
+        throw new IllegalArgumentException("No such shape " + nimi.toUpperCase());
     }
 
 }
