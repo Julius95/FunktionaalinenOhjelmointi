@@ -2,17 +2,7 @@
     (:use test-lein.core)
     (:use  midje.sweet))
 
-(defn square[x] (* x x))
 
-(defn karkausvuosi?[v] 
-  (or
-    (and 
-         (= (rem v 4) 0) 
-         (not= (rem v 100) 0)
-    )
-    ;||
-    (= (rem v 400) 0))
-)
   
   
   (facts "square tehtävä 4"

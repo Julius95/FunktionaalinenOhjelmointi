@@ -12,3 +12,14 @@
   (def person {:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}})
   (println (get-in person[:name :middle]))
   )
+
+(defn square[x] (* x x))
+
+(defn karkausvuosi?[v] 
+  (or
+    (and 
+         (= (rem v 4) 0) 
+         (not= (rem v 100) 0)
+    )
+    (= (rem v 400) 0))
+)
